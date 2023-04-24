@@ -1,6 +1,34 @@
-Array.prototype.forEach()
-Array.prototype.map()
-Array.prototype.filter()
+Array.prototype.forEach(): Itrera sobre los elementos de un arreglo (array) y ejecuta una función de devolución de llamada (callback) una vez por cada elemento en el arreglo,
+    en el orden en que aparecen en el arreglo.   Sintx: array.forEach(callbackFn(currentValue, index, array), thisArg);
+    Ej:
+    const array = [1, 2, 3, 4, 5];
+
+    array.forEach(function(element, index, array) {
+        console.log(`Elemento: ${element}, Índice: ${index}, Arreglo: ${array}`);
+    });
+
+Array.prototype.map(): Crea un nuevo arreglo con los resultados de llamar a una función de devolución de llamada (callback) en cada elemento de un arreglo (array),
+    en el orden en que aparecen en el arreglo original.     Sintx: const newArray = array.map(callbackFn(currentValue, index, array), thisArg);
+    Ej: 
+    const array = [1, 2, 3, 4, 5];
+
+    const newArray = array.map(function(element, index, array) {
+        return element * 2; // Se multiplica cada elemento por 2
+    });
+
+    console.log(newArray); // Output: [2, 4, 6, 8, 10]
+
+Array.prototype.filter(): crear un nuevo arreglo con todos los elementos que pasan una prueba (función de devolución de llamada) proporcionada.
+    Sintx: const newArray = array.filter(callbackFn(currentValue, index, array), thisArg);
+    Ej:
+    const array = [1, 2, 3, 4, 5];
+
+    const newArray = array.filter(function(element, index, array) {
+        return element % 2 === 0; // Se filtran solo los números pares
+    });
+
+    console.log(newArray); // Output: [2, 4]
+
 Array.prototype.reduce()
 Array.prototype.find()
 Array.prototype.findIndex()
@@ -8,36 +36,22 @@ Array.prototype.sort()
 Array.prototype.some()
 Array.prototype.every()
 Array.prototype.includes()
-String.prototype.split()
-String.prototype.trim()
-String.prototype.replace()
-String.prototype.includes()
-String.prototype.substring()
-Object.keys()
-Object.values()
-Object.entries()
-JSON.parse()
-JSON.stringify()
-Math.random()
-Math.floor()
-Math.round()
-Math.max()
-Math.min()
-Date.prototype.getTime()
-Date.prototype.toISOString()
-
 Array.prototype.concat()
 Array.prototype.join()
 Array.prototype.slice()
 Array.prototype.splice()
 Array.prototype.reverse()
 Array.prototype.fill()
-Array.prototype.some()
-Array.prototype.every()
 Array.prototype.reduceRight()
 Array.prototype.flat()
 Array.prototype.flatMap()
 Array.prototype.copyWithin()
+
+String.prototype.split()
+String.prototype.trim()
+String.prototype.replace()
+String.prototype.includes()
+String.prototype.substring()
 String.prototype.charAt()
 String.prototype.charCodeAt()
 String.prototype.indexOf()
@@ -51,6 +65,10 @@ String.prototype.padEnd()
 String.prototype.toLowerCase()
 String.prototype.toUpperCase()
 String.prototype.localeCompare()
+
+Object.keys()
+Object.values()
+Object.entries()
 Object.prototype.hasOwnProperty()
 Object.prototype.isPrototypeOf()
 Object.prototype.propertyIsEnumerable()
@@ -58,9 +76,15 @@ Object.prototype.toString()
 Object.assign()
 Object.create()
 Object.freeze()
-Object.keys()
-Object.values()
-Object.entries()
+
+JSON.parse()
+JSON.stringify()
+
+Math.random()
+Math.floor()
+Math.round()
+Math.max()
+Math.min()
 Math.abs()
 Math.ceil()
 Math.exp()
@@ -69,9 +93,9 @@ Math.sin()
 Math.cos()
 Math.tan()
 Math.sqrt()
-Math.floor()
-Math.round()
-Math.random()
+
+Date.prototype.getTime()
+Date.prototype.toISOString()
 Date.prototype.getFullYear()
 Date.prototype.getMonth()
 Date.prototype.getDate()
@@ -79,3 +103,14 @@ Date.prototype.getHours()
 Date.prototype.getMinutes()
 Date.prototype.getSeconds()
 Date.prototype.getMilliseconds()
+
+Set.add(value): Agrega un nuevo elemento con el valor especificado al conjunto.
+Set.delete(value): Elimina el elemento con el valor especificado del conjunto.
+Set.has(value): Devuelve un booleano que indica si el conjunto contiene un elemento con el valor especificado.
+Set.clear(): Elimina todos los elementos del conjunto.
+Set.size: Devuelve el número de elementos en el conjunto.
+Set.forEach(callbackFn, thisArg): Ejecuta una función de devolución de llamada (callback) una vez por cada elemento en el conjunto, en orden de inserción.
+Set.values(): Devuelve un nuevo objeto Iterator que contiene los valores de los elementos en el conjunto, en orden de inserción.
+Set.keys(): Es equivalente a values(), ya que los conjuntos en JavaScript no tienen claves y valores separados.
+Set.entries(): Devuelve un nuevo objeto Iterator que contiene pares de [valor, valor] de los elementos en el conjunto, en orden de inserción.
+    Esto es similar a values(), pero se mantiene por compatibilidad con Map.
