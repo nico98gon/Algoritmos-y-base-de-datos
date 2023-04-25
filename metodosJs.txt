@@ -50,7 +50,14 @@ Array.prototype.copyWithin()
 String.prototype.split()
 String.prototype.trim()
 String.prototype.replace()
-String.prototype.includes()
+String.prototype.includes(): Determina si una cadena de caracteres contiene otra cadena de caracteres como una subcadena.
+    Devuelve true si la subcadena está presente en la cadena original y false si no lo está.    Sintx: cadena.includes(subcadena);
+    Ej:
+    const cadena = "Hola, mundo!";
+    const subcadena = "mundo";
+
+    console.log(cadena.includes(subcadena)); // true
+
 String.prototype.substring()
 String.prototype.charAt()
 String.prototype.charCodeAt()
