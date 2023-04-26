@@ -66,7 +66,7 @@ const intersection = (nums1, nums2) => {
 
 // La siguiente solución tiene un time complexity de O(n^2) y space complexity de O(n)
 
-let intersection2 = function (nums1, nums2) {
+const intersection2 = function (nums1, nums2) {
     let result = [];
     for (let i = 0; i < nums1.length; i++) {
         if (nums2.includes(nums1[i])) {
